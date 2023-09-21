@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg bgheader" id="bgheader">
         <div class="container">
             <a class="navbar-brand" href="#">MUFIN</a>
             
@@ -29,4 +29,11 @@
 <script setup>
 
 </script>
-<style scoped></style>
+<style scoped>
+
+.bgheader {
+    background-color: #A8D1E7;
+    color: black;
+}
+
+</style>
