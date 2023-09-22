@@ -1,13 +1,15 @@
+<script setup>
+</script>
 <template>
     <nav class="navbar navbar-expand-lg bgheader" id="bgheader">
-        <div class="container">
-            <a class="navbar-brand" href="#">MUFIN</a>
+        <div class="container-fluid">
+            <a class="navbar-brand p-2 m-3" href="#">MUFIN</a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <!-- ลิงค์ไปหน้า Popula -->
                     <li class="nav-item">
@@ -26,9 +28,7 @@
         </div>
     </nav>
 </template>
-<script setup>
 
-</script>
 <style scoped>
 
 .bgheader {
