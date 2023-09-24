@@ -37,8 +37,10 @@
 .footer{
     background-color: #F9EEB6;
     padding: 0px; 
+    bottom: 0;
   }
 </style>
 
 <script setup>
+
 </script>
