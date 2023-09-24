@@ -34,7 +34,7 @@ import Footer from '../components/footer.vue'
 
             <div class="text-center">
                 <p>Not a member? <router-link class="nav-link" to="signup" style="color: rgb(0, 47, 255);"> Register</router-link></p>
-                <p>or sign up with:</p>
+                <p>or sign in with:</p>
                 <div class="btn-group" role="group" aria-label="Social Sign Up">
                     <button type="button" class="btn btn-link btn-floating mx-1">
                         <i class="fab fa-facebook-f"></i>
