@@ -15,7 +15,7 @@ import Footer from '../components/footer.vue'
             <h2 class="center">Sign Up</h2>
         </div>
     </div><br>
-    <div class="container-md">
+    <div class="container-md ">
         <form>
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerName">Name</label>
@@ -64,6 +64,8 @@ import Footer from '../components/footer.vue'
             </div>
         </form>
     </div>
+
+    <div style="padding: 40px;"></div>
     <Footer></Footer>
 </template>
 

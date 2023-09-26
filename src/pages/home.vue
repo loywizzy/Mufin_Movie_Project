@@ -4,6 +4,8 @@ import headermuf from '../views/headermuf.vue'
 import cardmovie from '../components/cardmovie.vue'
 import Recommended from '../components/recommend.vue'
 import Footer from '../components/footer.vue'
+
+
 </script>
 
 <template>

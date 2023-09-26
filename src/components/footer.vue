@@ -42,5 +42,4 @@
 </style>
 
 <script setup>
-
 </script>

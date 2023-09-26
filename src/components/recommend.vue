@@ -1,5 +1,8 @@
 <script setup>
 import { ref } from 'vue' 
+
+
+
 const showPopup = ref(true);
 const listrecomment1 = ref([
 {name:"Spider-Man: Beyond the Spider-Verse",year:"2023",link :"https://m.media-amazon.com/images/M/MV5BYWJlNThmNWMtZWE5Zi00YWJiLWJiOTQtZWY1Y2I3ZmNhMDYwXkEyXkFqcGdeQXVyMTk2OTAzNTI@._V1_.jpg",score:"8.7",time:"2h 20m",director:"Joaquim Dos /SantosKemp PowersJustin/ K. Thompson"},
