@@ -27,3 +27,9 @@ export const userlogin = defineStore('userlogin', () => {
 
   return { login, logined }
 })
+
+// export const list_category = defineStore('userlolist_category', () => {
+
+
+//   return { ,  }
+// })
