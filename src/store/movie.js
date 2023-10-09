@@ -20,7 +20,6 @@ export const movie = defineStore('movie', () => {
   const sicfi = ref([{name:' ',year:' ',imdb:' ',time:' ',director:' ',author:' ',actor:' ',reviwe:" "}])
   const thriller = ref([{name:' ',year:' ',imdb:' ',time:' ',director:' ',author:' ',actor:' ',reviwe:" "}])
  
- const reviews
 
  
   return {action,adventure,animation,comedy,drama,documentary,fantasy,horror,romantic,sicfi,thriller}

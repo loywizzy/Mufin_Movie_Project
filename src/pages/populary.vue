@@ -10,6 +10,7 @@ import Footer from '../components/footer.vue'
 
   <div class="header">
     <headermuf></headermuf>
+
   </div>
   <div class="main m-3 p-3 row ">
 
