@@ -39,12 +39,12 @@ const listrecomment2 = ref([
     <div class="row row-cols-1 row-cols-md-4 g-4 m-3">
       <div class="col-3" v-for="product in data.product1" :key="product.id" :product="product">
         <div class="card h-100" style="max-width: 276px;">
-          <img :src="product.link" class="card-img-top m-3 rounded-4" alt="..." style="max-width: 150px;">
+          <img :src="product.img" class="card-img-top m-3 rounded-4" alt="..." style="max-width: 150px;">
           <div class="card-body">
             <div class="card-text">{{ product.year }}</div>
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text overflow-auto mb-5">
-              {{ product.score }}<i class="fa-solid fa-star" style="color: #F9EEB6;"></i><br>
+              {{ product.imdb }}<i class="fa-solid fa-star" style="color: #F9EEB6;"></i><br>
               Time : {{ product.time }} <br>
               Director : {{ product.director }}</p>
           </div>
@@ -64,12 +64,12 @@ const listrecomment2 = ref([
       <div class="row row-cols-1 row-cols-md-4 g-4 m-3">
         <div class="col mb-3" v-for="product in data.products" :key="product.id" :product="product">
           <div class="card h-100" style="max-width: 276px;">
-            <img :src="product.link" class="card-img-top m-3 rounded-4" alt="..." style="max-width: 150px;">
+            <img :src="product.img" class="card-img-top m-3 rounded-4" alt="..." style="max-width: 150px;">
             <div class="card-body">
               <div class="card-text">{{ product.year }}</div>
               <h5 class="card-title">{{ product.name }}</h5>
               <p class="card-text overflow-auto mb-5">
-                {{ product.score }}<i class="fa-solid fa-star" style="color: #F9EEB6;"></i><br>
+                {{ product.imdb }}<i class="fa-solid fa-star" style="color: #F9EEB6;"></i><br>
                 Time : {{ product.time }} <br>
                 Director : {{ product.director }}
               </p>

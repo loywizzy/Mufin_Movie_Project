@@ -6,6 +6,7 @@ import * as bootstrap from 'bootstrap'
 import '/node_modules/bootstrap/dist/css/bootstrap.css'
 import '/node_modules/bootstrap/dist/js/bootstrap'
 import './assets/global.css'
+import './assets/storecss.css'
 
 
 const app = createApp(App)
