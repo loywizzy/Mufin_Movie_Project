@@ -5,6 +5,8 @@ import router from './router'
 import * as bootstrap from 'bootstrap'
 import '/node_modules/bootstrap/dist/css/bootstrap.css'
 import '/node_modules/bootstrap/dist/js/bootstrap'
+import './assets/global.css'
+
 
 const app = createApp(App)
 const pinia = createPinia()

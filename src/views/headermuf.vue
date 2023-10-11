@@ -12,10 +12,13 @@ const login = userlogin()
           <router-link class="nav-link fs-3" to="/">HOME</router-link>
         </li>
         <li class="nav-item m-3">
-          <a class="nav-link fs-3" href="populary">POPULLAR MOVIES</a>
+          <router-link class="nav-link fs-3" to="populary">POPULLAR MOVIES</router-link>
         </li>
         <li class="nav-item m-3">
-          <a class="nav-link fs-3" href="category">CATEGORY</a>
+          <router-link class="nav-link fs-3" to="category">CATEGORY</router-link>
+        </li>
+        <li class="nav-item m-3">
+          <router-link class="nav-link fs-3" to="cart">Cart Test</router-link>
         </li>
       </ul>
     </div>
