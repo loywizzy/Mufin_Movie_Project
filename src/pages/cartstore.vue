@@ -59,7 +59,7 @@
             <div class="data-table-cell-content4">
               <b class="text1">Order Total( {{ totalItems }} )</b>
             </div>
-            <div class="data-table-cell-content5">
+            <div class="data-table-cell-content5"> 
               <b class="text1">{{ data.cartItems.reduce((acc, item) => acc += item.price * item.quantity, 0) }}</b>
             </div>
           </div>
