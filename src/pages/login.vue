@@ -18,22 +18,24 @@ const login = userlogin()
             <h2 class="center">Sign In</h2>
         </div>
     </div><br>
-    <div class="container-md">
+    <div >
         <form>
 
-            <div class="mb-4">
+           <div class="row justify-content-center ">
+            <div class="col-4 mb-4">
                 <label for="form2Example1" class="form-label">Email address</label>
-                <input type="email" id="form2Example1" class="form-control" />
+                <input type="email" id="form2Example1" class="form-control input" />
             </div>
-
-            <div class="mb-4">
+            <div class="row justify-content-center ">
+                <div class="col-4 mb-4">
                 <label for="form2Example2" class="form-label">Password</label>
-                <input type="password" id="form2Example2" class="form-control" />
+                <input type="password" id="form2Example2" class="form-control input " />
             </div>
+            </div>
+           
 
-            <div class="text-center">
-                <button type="button" class="btn btn-outline-primary btn-block mb-4"><router-link to="/" class="nav-link" @click="login.logined()">Sign in</router-link></button>
-            </div>
+            
+           </div>
 
             <div class="text-center">
                 <p>Not a member? <router-link class="nav-link" to="signup" style="color: rgb(0, 47, 255);"> Register</router-link></p>
@@ -57,6 +59,9 @@ const login = userlogin()
                 </div>
             </div>
         </form>
+        <div class="text-center">
+                <button type="button" class="btn btn-light m-2"><router-link to="/" class="nav-link" @click="login.logined()">Sign in</router-link></button>
+            </div>
     </div>
     <div style="padding: 110px;"></div>
 
@@ -67,6 +72,27 @@ const login = userlogin()
 <style scoped>
 .center {
     text-align: center;
+}
+.bgheader {
+    background-color: #A8D1E7;
+    color: black;
+}
+.btn-light{
+    border-color: #374785;
+    color: #374785;
+    border-radius: 20px;
+}
+.button:hover{
+  filter: drop-shadow(0 0 px #374785);
+}
+.input{
+    border-color: #A8D1E7;
+    color: #A8D1E7;
+    border-radius: 20px;
+}
+label,p{
+    color: #374785; 
+    margin-left: 20px;
 }
 </style>
 

@@ -8,7 +8,6 @@ import '/node_modules/bootstrap/dist/js/bootstrap'
 import './assets/global.css'
 import './assets/storecss.css'
 
-
 const app = createApp(App)
 const pinia = createPinia()
 app.use(pinia)

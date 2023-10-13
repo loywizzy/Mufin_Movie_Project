@@ -3,11 +3,13 @@
     <headermuf></headermuf>
     <div class="card-2-column1">
       <div class="frame-parent">
-        <img class="frame-item" alt="" src="/frame-18.svg" />
+        <input type="checkbox" id="selectAll" v-model="selectAll" @change="selectAllItems">
         <b class="b1">เลือกทั้งหมด</b>
       </div>
     </div>
     <div class="card-2-column mb-3" v-for="item in data.getCartItems" :key="item.id">
+      <input class="macbook-pro-16-2-item" type="checkbox" :id="'item_' + item.id" v-model="item.checked" />
+      <p class="icon-close-circle" @click="data.removeFromCart(item)"><i class="fa-regular fa-circle-xmark"></i></p>
       <div class="blocks">
         <div class="block">
           <div class="href">
@@ -15,18 +17,18 @@
           </div>
         </div>
         <div class="text">
-          <b class="add-product-name">{{ item.name }}</b>
+          <b class="add-product-name mb-3">{{ item.name }}</b>
           <div class="price-29-per-week-parent">
-            <div class="category-action">Price : {{ item.price }} per week</div>
+            <div class="category-action">Price : {{ item.price }} per month</div>
             <div class="category-action">Time : {{ item.time }}</div>
             <div class="category-action">Category : {{ item.type }}</div>
           </div>
           <div class="eye-catching-button">
             <div class="hovertrue">
               <div class="button2">
-                <img class="vector-icon" alt="" src="/vector.svg" />
+                <p @click="data.incrementQ(item)" class="lob">+</p>
                 <b class="b">{{ item.quantity }}</b>
-                <img class="icon-plus" alt="" src="/-icon-plus.svg" />
+                <p @click="data.decrementQ(item)" class="lob">-</p>
               </div>
             </div>
           </div>
@@ -37,34 +39,36 @@
       <div class="frame-inner" />
       <div class="data-table-parent">
         <div class="data-table">
-          <b class="total-price">Total price</b>
+          <b class="total-price" >Total price</b>
           <div class="data-table-row" v-for="item in data.getCartItems" :key="item.id">
             <div class="data-table-cell-content">
               <div class="text1"> {{ item.name }}</div>
             </div>
             <div class="data-table-cell-content1">
-              <div class="text1">{{ item.price }}</div>
+              <div class="text1">{{ item.price }} Bath</div>
             </div>
+            
+            
           </div>
-          <!-- <div class="data-table-row">
+          <div class="data-table-row">
               <div class="data-table-cell-content4">
-                <div class="text1">discount 10%</div>
+                <div class="text1">Discount 10%</div>
               </div>
               <div class="data-table-cell-content5">
-                <div class="text1">-$3.90</div>
+                <div class="text1" style="color: red;">- {{ calculateDiscount().discountAmount }} Bath</div>
               </div>
-            </div> -->
+            </div>
           <div class="data-table-row4">
             <div class="data-table-cell-content4">
-              <b class="text1">Order Total( {{ totalItems }} )</b>
+              <b class="text1">Order Total ( {{ totalItems }} )</b>
             </div>
-            <div class="data-table-cell-content5"> 
-              <b class="text1">{{ data.cartItems.reduce((acc, item) => acc += item.price * item.quantity, 0) }}</b>
+            <div class="data-table-cell-content5">
+              <b class="text1">{{ calculateDiscount().discountedTotal }} Bath</b>
             </div>
           </div>
         </div>
         <div class="text-parent">
-          <div class="text11">when you buy $ 10</div>
+          <div class="text11">when you buy 150 Bath</div>
           <b class="text12">SAVE 10 %</b>
         </div>
       </div>
@@ -165,7 +169,6 @@
           <p class="blank-line4">&nbsp;</p>
         </div>
         <div class="spacer" />
-        <img class="star-icon" alt="" src="/star.svg" />
         <button @click="data.addToCart(product)" class="btn btn-dark position-absolute bottom-0 m-3 rounded-pill">Add
           to cart</button>
       </div>
@@ -174,17 +177,25 @@
   </div>
 </template>
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed , watchEffect} from 'vue';
 import headermuf from '../views/headermuf.vue'
 
 import { useShoppingStore } from "../store/movies"
 const data = useShoppingStore();
+const totalItems = computed(() => {
+  return data.getCartItems.reduce((total, item) => total + item.quantity, 0);
+});
 
-/*     import { defineComponent } from "vue";
-  
-    export default defineComponent({
-      name: "MacBookPro162",
-    }); */
+const calculateDiscount = () => {
+  const discountPercentage = 10;
+  const totalWithoutDiscount = data.cartItems.reduce((acc, item) => acc += item.price * item.quantity, 0);
+  const discountedTotal = totalWithoutDiscount > 150 ? totalWithoutDiscount * (1 - discountPercentage / 100) : totalWithoutDiscount;
+  const discountAmount = totalWithoutDiscount - discountedTotal;
+  return {
+    discountAmount: discountAmount.toFixed(2),
+    discountedTotal: discountedTotal.toFixed(2)
+  };
+};
 
 const props = defineProps({
   product: {
@@ -193,10 +204,21 @@ const props = defineProps({
   }
 });
 
-const totalItems = computed(() => {
-  return data.getCartItems.reduce((total, item) => total + item.quantity, 0);
+const selectAllItems = () => {
+  data.getCartItems.forEach(item => (item.checked = selectAll.value));
+};
+const selectAll = ref(false);
+
+watchEffect(() => {
+  selectAllItems();
 });
 
 </script>
-<style scoped></style>
+<style scoped>
+
+.lob{
+  height: 300%;
+}
+
+</style>
   

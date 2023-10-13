@@ -8,21 +8,24 @@ import Footer from '../components/footer.vue'
 
 </script>
 
-<template>
+<template >
   <RouterView></RouterView>
-
-  <div class="header">
-    <headermuf></headermuf>
-  </div>
-  <div class="main m-3 p-3 row ">
-      <h1 class="col-2 text-center align-self-center fw-bolder ">NEW<br>MOVIES</h1>
-        <cardmovie class="col-10"></cardmovie>
+  <div class="main m-3 p-3 row " >
+    <headermuf class="fixed-top"></headermuf>
+      <h1 class="col-2 text-center align-self-center fw-bolder " style="margin-top: 100px;" >NEW<br>MOVIES</h1>
+        <cardmovie class="col-10" style="margin-top: 100px;"></cardmovie>
         <Recommended></Recommended>
         
   </div> 
+  <a href="#top" class="btn btn-primary btn-sm flybt"><i class="fa-regular fa-circle-up"></i></a>
 <Footer></Footer>
 </template>
 
 <style scoped>
-
+    .flybt {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        margin: 1rem;
+    }
 </style>

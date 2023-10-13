@@ -201,6 +201,7 @@
   
   .price-29-per-week-parent {
     width: 242px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -536,25 +537,19 @@
   }
   
   .macbook-pro-16-2-item {
-    position: absolute;
-    top: 690px;
-    left: 130px;
+    position: relative;
+    top: 120px;
+    left: -355px;
     border-radius: var(--br-8xs);
-    width: 33px;
-    height: 33px;
+    width: 45px;
+    height: 45px;
   }
   
   .icon-close-circle {
     position: absolute;
-    height: 2.06%;
-    width: 1.33%;
-    top: 52.37%;
-    right: 48.84%;
-    bottom: 45.57%;
-    left: 49.83%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
+    top: 5%;
+    left: 95%;
+    border-radius: var(--br-8xs);
   }
   
   .card-2-column3 {
@@ -776,5 +771,4 @@
     text-align: left;
     font-size: var(--font-size-5xl);
     color: var(--color-black);
-    font-family: var(--font-inter);
   }

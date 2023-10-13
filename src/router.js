@@ -5,6 +5,8 @@ import home from './pages/home.vue'
 import populary from './pages/populary.vue'
 import category from './pages/category.vue'
 import cartstore from './pages/cartstore.vue'
+import bigcard from './pages/bigcard.vue'
+
 
 const routes = [
     {path: '/populary' ,
@@ -21,6 +23,9 @@ const routes = [
 
     {path: '/' ,
     component: home},
+
+    {path: '/bigcard' ,
+    component: bigcard},
 
     {path: '/cart' ,
     component: cartstore}]

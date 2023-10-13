@@ -1,19 +1,22 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-
-
 //ตอนใช้ให้ใส่ในscript
 //import { user } from '../store/user'
 //const user = user()
-export const user = defineStore('user', () => {
-  const count = ref("0")
-  const doubleCount = computed(() => count.value * 2)
-  function increment() {
-    count.value++
+export const add = defineStore('add', () => {
+  const id = ref(0)
+ function getid(item){
+  if (item >= 33 ){
+    id.value = item -5
+  }else{
+    id.value = item-1
+  }
+  console.log(id)
   }
 
-  return { count, doubleCount, increment }
+  return {getid ,id}
 })
+
 
 
 //ตอนใช้ให้ใส่ในscript
