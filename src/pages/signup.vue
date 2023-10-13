@@ -15,6 +15,7 @@ import Footer from '../components/footer.vue'
             <h2 class="center">Sign Up</h2>
         </div>
     </div><br>
+<<<<<<< HEAD
     <div class="row container-center ">
         <form>
          <div class="row justify-content-center">
@@ -42,6 +43,32 @@ import Footer from '../components/footer.vue'
                 <input type="password" id="registerPassword" class="form-control input" />
             </div>
            </div>
+=======
+    <div class="container-md ">
+        <form>
+            <div class="form-outline mb-4">
+                <label class="form-label" for="registerName">Name</label>
+                <input type="text" id="registerName" class="form-control" />
+            </div>
+
+            <!-- Username input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="registerUsername">Username</label>
+                <input type="text" id="registerUsername" class="form-control" />
+            </div>
+
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" class="form-control" />
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+                <label class="form-label" for="registerPassword">Password</label>
+                <input type="password" id="registerPassword" class="form-control" />
+            </div>
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
             <div class="text-center">
             <p>or sign up with:</p>
                 <div class="btn-group" role="group" aria-label="Social Sign Up">
@@ -61,11 +88,18 @@ import Footer from '../components/footer.vue'
                         <i class="fab fa-github"></i>
                     </button>
                 </div>
+<<<<<<< HEAD
             </div>
             <div class="text-center">
                 <button type="button" class="btn btn-light m-2 "><router-link class="nav-link" to="login">Sign Up</router-link></button>
             </div>
         
+=======
+            </div><br>
+            <div class="text-center">
+                <button type="submit" class="btn btn-outline-primary btn-block mb-3"><router-link class="nav-link" to="login">Sign Up</router-link></button>
+            </div>
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
         </form>
     </div>
 
@@ -77,6 +111,7 @@ import Footer from '../components/footer.vue'
 .center {
     text-align: center;
 }
+<<<<<<< HEAD
 .bgheader {
     background-color: #A8D1E7;
     color: black;
@@ -99,5 +134,7 @@ label,p{
     margin-left: 20px;
 }
 
+=======
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
 </style>
 

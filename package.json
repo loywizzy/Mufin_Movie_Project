@@ -13,7 +13,10 @@
   "dependencies": {
     "bootstrap": "^5.3.2",
     "pinia": "^2.1.6",
+<<<<<<< HEAD
     "sweetalert2": "^11.7.32",
+=======
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
@@ -26,7 +29,10 @@
     "eslint-plugin-vue": "^9.17.0",
     "jsdom": "^22.1.0",
     "prettier": "^3.0.3",
+<<<<<<< HEAD
     "sass": "^1.69.3",
+=======
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
     "vite": "^4.4.9",
     "vitest": "^0.34.4"
   }

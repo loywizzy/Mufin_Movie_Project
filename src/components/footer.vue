@@ -24,7 +24,11 @@
         <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Company, Inc</span>
       </div>
 
+<<<<<<< HEAD
       <ul class="col-md-4 justify-content-end list-unstyled d-flex " style="margin-right:15px ;">
+=======
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex " style="margin-right:15px ;">
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
         <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
         <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
         <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>

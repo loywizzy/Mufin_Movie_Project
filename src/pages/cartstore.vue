@@ -3,6 +3,7 @@
     <headermuf></headermuf>
     <div class="card-2-column1">
       <div class="frame-parent">
+<<<<<<< HEAD
         <input type="checkbox" id="selectAll" v-model="selectAll" @change="selectAllItems">
         <b class="b1">เลือกทั้งหมด</b>
       </div>
@@ -10,6 +11,13 @@
     <div class="card-2-column mb-3" v-for="item in data.getCartItems" :key="item.id">
       <input class="macbook-pro-16-2-item" type="checkbox" :id="'item_' + item.id" v-model="item.checked" />
       <p class="icon-close-circle" @click="data.removeFromCart(item)"><i class="fa-regular fa-circle-xmark"></i></p>
+=======
+        <img class="frame-item" alt="" src="/frame-18.svg" />
+        <b class="b1">เลือกทั้งหมด</b>
+      </div>
+    </div>
+    <div class="card-2-column" v-for="item in data.getCartItems" :key="item.id">
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
       <div class="blocks">
         <div class="block">
           <div class="href">
@@ -17,34 +25,57 @@
           </div>
         </div>
         <div class="text">
+<<<<<<< HEAD
           <b class="add-product-name mb-3">{{ item.name }}</b>
           <div class="price-29-per-week-parent">
             <div class="category-action">Price : {{ item.price }} per month</div>
             <div class="category-action">Time : {{ item.time }}</div>
             <div class="category-action">Category : {{ item.type }}</div>
+=======
+          <b class="add-product-name">{{ item.name }}</b>
+          <div class="price-29-per-week-parent">
+            <div class="category-action">Price : {{ item.price }} per week</div>
+            <div class="category-action">Time : {{ item.time }}</div>
+            <div class="category-action">Category : action / commady</div>
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
           </div>
           <div class="eye-catching-button">
             <div class="hovertrue">
               <div class="button2">
+<<<<<<< HEAD
                 <p @click="data.incrementQ(item)" class="lob">+</p>
                 <b class="b">{{ item.quantity }}</b>
                 <p @click="data.decrementQ(item)" class="lob">-</p>
+=======
+                <img class="vector-icon" alt="" src="/vector.svg" />
+                <b class="b">{{ item.price }}</b>
+                <img class="icon-plus" alt="" src="/-icon-plus.svg" />
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
     <div class="rectangle-parent">
       <div class="frame-inner" />
       <div class="data-table-parent">
         <div class="data-table">
+<<<<<<< HEAD
           <b class="total-price" >Total price</b>
+=======
+          <b class="total-price">Total price</b>
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
           <div class="data-table-row" v-for="item in data.getCartItems" :key="item.id">
             <div class="data-table-cell-content">
               <div class="text1"> {{ item.name }}</div>
             </div>
             <div class="data-table-cell-content1">
+<<<<<<< HEAD
               <div class="text1">{{ item.price }} Bath</div>
             </div>
             
@@ -64,11 +95,34 @@
             </div>
             <div class="data-table-cell-content5">
               <b class="text1">{{ calculateDiscount().discountedTotal }} Bath</b>
+=======
+              <div class="text1">{{ item.price }}</div>
+            </div>
+          </div>
+          <!-- <div class="data-table-row">
+              <div class="data-table-cell-content4">
+                <div class="text1">discount 10%</div>
+              </div>
+              <div class="data-table-cell-content5">
+                <div class="text1">-$3.90</div>
+              </div>
+            </div> -->
+          <div class="data-table-row4">
+            <div class="data-table-cell-content4">
+              <b class="text1">Order Total( {{ totalItems }} )</b>
+            </div>
+            <div class="data-table-cell-content5"> 
+              <b class="text1">{{ data.cartItems.reduce((acc, item) => acc += item.price * item.quantity, 0) }}</b>
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
             </div>
           </div>
         </div>
         <div class="text-parent">
+<<<<<<< HEAD
           <div class="text11">when you buy 150 Bath</div>
+=======
+          <div class="text11">when you buy $ 10</div>
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
           <b class="text12">SAVE 10 %</b>
         </div>
       </div>
@@ -169,6 +223,10 @@
           <p class="blank-line4">&nbsp;</p>
         </div>
         <div class="spacer" />
+<<<<<<< HEAD
+=======
+        <img class="star-icon" alt="" src="/star.svg" />
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
         <button @click="data.addToCart(product)" class="btn btn-dark position-absolute bottom-0 m-3 rounded-pill">Add
           to cart</button>
       </div>
@@ -177,11 +235,16 @@
   </div>
 </template>
 <script setup>
+<<<<<<< HEAD
 import { ref, computed , watchEffect} from 'vue';
+=======
+import { ref, computed } from 'vue';
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
 import headermuf from '../views/headermuf.vue'
 
 import { useShoppingStore } from "../store/movies"
 const data = useShoppingStore();
+<<<<<<< HEAD
 const totalItems = computed(() => {
   return data.getCartItems.reduce((total, item) => total + item.quantity, 0);
 });
@@ -196,6 +259,14 @@ const calculateDiscount = () => {
     discountedTotal: discountedTotal.toFixed(2)
   };
 };
+=======
+
+/*     import { defineComponent } from "vue";
+  
+    export default defineComponent({
+      name: "MacBookPro162",
+    }); */
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
 
 const props = defineProps({
   product: {
@@ -204,6 +275,7 @@ const props = defineProps({
   }
 });
 
+<<<<<<< HEAD
 const selectAllItems = () => {
   data.getCartItems.forEach(item => (item.checked = selectAll.value));
 };
@@ -221,4 +293,12 @@ watchEffect(() => {
 }
 
 </style>
+=======
+const totalItems = computed(() => {
+  return data.getCartItems.reduce((total, item) => total + item.quantity, 0);
+});
+
+</script>
+<style scoped></style>
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
   

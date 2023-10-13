@@ -5,8 +5,11 @@ import home from './pages/home.vue'
 import populary from './pages/populary.vue'
 import category from './pages/category.vue'
 import cartstore from './pages/cartstore.vue'
+<<<<<<< HEAD
 import bigcard from './pages/bigcard.vue'
 
+=======
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
 
 const routes = [
     {path: '/populary' ,
@@ -24,9 +27,12 @@ const routes = [
     {path: '/' ,
     component: home},
 
+<<<<<<< HEAD
     {path: '/bigcard' ,
     component: bigcard},
 
+=======
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
     {path: '/cart' ,
     component: cartstore}]
 

@@ -18,6 +18,7 @@ const login = userlogin()
             <h2 class="center">Sign In</h2>
         </div>
     </div><br>
+<<<<<<< HEAD
     <div >
         <form>
 
@@ -36,6 +37,24 @@ const login = userlogin()
 
             
            </div>
+=======
+    <div class="container-md">
+        <form>
+
+            <div class="mb-4">
+                <label for="form2Example1" class="form-label">Email address</label>
+                <input type="email" id="form2Example1" class="form-control" />
+            </div>
+
+            <div class="mb-4">
+                <label for="form2Example2" class="form-label">Password</label>
+                <input type="password" id="form2Example2" class="form-control" />
+            </div>
+
+            <div class="text-center">
+                <button type="button" class="btn btn-outline-primary btn-block mb-4"><router-link to="/" class="nav-link" @click="login.logined()">Sign in</router-link></button>
+            </div>
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
 
             <div class="text-center">
                 <p>Not a member? <router-link class="nav-link" to="signup" style="color: rgb(0, 47, 255);"> Register</router-link></p>
@@ -59,9 +78,12 @@ const login = userlogin()
                 </div>
             </div>
         </form>
+<<<<<<< HEAD
         <div class="text-center">
                 <button type="button" class="btn btn-light m-2"><router-link to="/" class="nav-link" @click="login.logined()">Sign in</router-link></button>
             </div>
+=======
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
     </div>
     <div style="padding: 110px;"></div>
 
@@ -73,6 +95,7 @@ const login = userlogin()
 .center {
     text-align: center;
 }
+<<<<<<< HEAD
 .bgheader {
     background-color: #A8D1E7;
     color: black;
@@ -94,5 +117,7 @@ label,p{
     color: #374785; 
     margin-left: 20px;
 }
+=======
+>>>>>>> 5b4c3e4dd00a10f0382c1c031b0c46011d0f056e
 </style>
 
